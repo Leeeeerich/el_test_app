@@ -2,8 +2,8 @@ import 'dart:convert';
 
 import 'package:el_test_app/src/model/local_consts.dart';
 import 'package:el_test_app/src/model/models/models.dart';
-import 'package:el_test_app/src/model/web_api/web_utils.dart';
 import 'package:el_test_app/src/model/web_api/web_api.dart';
+import 'package:el_test_app/src/model/web_api/web_utils.dart';
 import 'package:http/http.dart';
 import 'package:http_middleware/http_middleware.dart';
 
@@ -14,11 +14,12 @@ class WebApiImpl implements WebApi {
 
   @override
   Future<Result<ChatMessage>> sendMessage(ChatMessage message) async {
-    var res = await _client.put(
-      "${BaseConstants.BASE_URL}",
+    var res = await _client.get(
+      "${BaseConstants.BASE_URL}?format=json",
       headers: BaseConstants.HEADERS,
-      body: message.toJson(),
     );
+
+    print("Response ${res.body}");
 
     return responseConverter(res);
   }
