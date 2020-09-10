@@ -7,4 +7,4 @@
 Имел проблемы:
  - дизайном - так как дизайн имеет некоторые погрешности;
  - веб запросом - не совсем верно понял необходимые действия
- - 0.5ч - собрать сборку которая будет устанавливаться. Лежит в [**релизах**](https://github.com/Leeeeerich/el_test_app/releases/download/test/app-release.apk).
+ - 0.5ч - собрать сборку которая будет устанавливаться. Лежит в релизах. [**Скачать**](https://github.com/Leeeeerich/el_test_app/releases/download/test/app-release.apk).
