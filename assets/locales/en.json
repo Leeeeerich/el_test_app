@@ -1,5 +1,6 @@
 {
   "elomia_title": "Elomia",
   "write_message_hint": "Write a message",
-  "send_message": "Send message"
+  "send_message": "Send message",
+  "empty_screen_message": "Hi! Talk to me!"
 }

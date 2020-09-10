@@ -10,10 +10,18 @@ class ChatModel extends ChangeNotifier {
 
   List<ChatMessage> get messages => _messages;
 
-  Future sendMessage(ChatMessage message) async {
+  Future<String> sendMessage(ChatMessage message) async {
+    _messages.insert(0, message);
+    notifyListeners();
     _repository.sendMessage(message).then((value) {
-      _messages.add(value.result);
-      notifyListeners();
+      if (value.isSuccessful) {
+        _messages.insert(0, value.result);
+        notifyListeners();
+      } else {
+        return "Error = ${value.error}";
+      }
+    }).catchError((e) {
+      return "Error = $e";
     });
   }
 }

@@ -1,19 +1,19 @@
 class ChatMessage {
   String ip;
-  DateTime sendMoment;
+  int requestTime;
   String text;
 
   ChatMessage();
 
   ChatMessage.text(this.text);
 
-  ChatMessage.all(this.ip, this.sendMoment, this.text);
+  ChatMessage.all(this.ip, this.requestTime, this.text);
 
   Map<String, dynamic> toJson() {
     return {'text': text};
   }
 
   factory ChatMessage.fromJson(Map<String, dynamic> map) {
-    return ChatMessage.all(map['ip'], map['sendMoment']?.toDate(), map['text']);
+    return ChatMessage.all(map['ip'], map['sendMoment'], map['text']);
   }
 }
