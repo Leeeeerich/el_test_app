@@ -23,11 +23,11 @@ class _ChatScreen extends State<ChatScreen> {
         backgroundColor: getColorFromHex("E5E5E5"),
         appBar: AppBar(
           title: Row(children: <Widget>[
-            Image.asset("assets/icons/ic_elomia.png",
+            Image.asset("assets/icons/ic_robot.png",
                 fit: BoxFit.cover, height: 36),
             Padding(
                 padding: EdgeInsets.symmetric(horizontal: 8),
-                child: Text(FlutterI18n.translate(context, "elomia_title"))),
+                child: Text(FlutterI18n.translate(context, "app_title"))),
           ]),
           backgroundColor: getColorFromHex("A4B3EA"),
         ),
